@@ -1,4 +1,4 @@
-name: CI - Github Hosted
+name: CI - Slef Hosted
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
 
@@ -20,4 +20,4 @@ jobs:
 
     - name: Run Docker Iamge (test)
       run: |
-        docker run tf:test /bin/bash -c "python run.py test_input.png && ls"
+        docker run --name tf tf:test /bin/bash -c "python run.py test_input.png && ls"

@@ -20,4 +20,7 @@ jobs:
 
     - name: Run Docker Iamge (test)
       run: |
-        docker run tf:test /bin/bash -c "python run.py test_input.png && ls"
+        docker run --name tf tf:test /bin/bash -c "python run.py test_input.png && ls"
+
+    - name: Delete tf container
+      run: docker rm tf
