@@ -21,3 +21,4 @@ jobs:
     - name: Run Docker Iamge (test)
       run: |
         docker run --name tf tf:test python run.py test_input.png && ls
+        ls
