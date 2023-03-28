@@ -23,4 +23,5 @@ jobs:
         docker run --name tf tf:test /bin/bash -c "python run.py test_input.png && ls"
 
     - name: Delete tf container
+      if: ${{ always() }}
       run: docker rm tf

@@ -1,4 +1,4 @@
-name: CI - Slef Hosted
+name: CI - Github Hosted
 
 on:
   push:
