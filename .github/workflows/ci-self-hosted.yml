@@ -1,10 +1,6 @@
 name: CI - Slef Hosted
 
 on:
-  push:
-    branches: [ "develop" ]
-  pull_request:
-    branches: [ "develop" ]
   workflow_dispatch:
 
 jobs:
